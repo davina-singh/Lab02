@@ -1,6 +1,6 @@
-import Gallery from './Gallery'
+import Gallery from './Gallery';
 
-export default function HornedBeast({title, image, description}) {
+export default function HornedBeast({title, img, description}) {
     
     return (
         <>

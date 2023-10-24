@@ -1,5 +1,4 @@
 import HornedBeast from "./HornedBeast";
-import bestArr from "../data.js";
 import rhino from '../assets/rhino.jpg';
 import unicorn from '../assets/unicorn.jpg';
 import unicorn2 from '../assets/unicorn2.jpg';

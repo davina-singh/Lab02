@@ -1,11 +1,12 @@
 import './App.css'
-import Parent from './components/Parent'
+import Gallery from './components/Gallery'
+import beastArr from './Data'
 
 function App() {
 
   return (
     <>
-    <Parent />
+      <Gallery beasts={beastArr}/>
     </>
   )
 }

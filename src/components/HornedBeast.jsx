@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function HornedBeast({ title, imageUrl, description }) {
+export default function HornedBeast({ title, image_url, description }) {
 
     const [likes, setLikes] = useState(0);
 
@@ -11,7 +11,7 @@ export default function HornedBeast({ title, imageUrl, description }) {
     return (
         <div>
             <h2>{title}</h2>
-            <img src={imageUrl}  />
+            <img src={image_url}  />
             <p>{description}</p>
             <p onClick={handleLikes}>❤️ {likes}</p>
         </div>

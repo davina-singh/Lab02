@@ -1,26 +1,19 @@
 import HornedBeast from "./HornedBeast";
-import rhino from '../assets/rhino.jpg';
-import unicorn from '../assets/unicorn.jpg';
-import unicorn2 from '../assets/unicorn2.jpg';
+import data from "../assets/beast-data.json";
 
-import { useState } from 'react'
-
-export default function Gallery(props) {
-    const [likes, setLikes] = useState(0);
-
-    function handleLikes() {
-        setLikes(likes + 1);
-    }
+export default function Gallery() {
     return (
-        <>
-            <h2>Horned Beasts 😎 🐉 </h2>
-            {
-                props.beasts.map((beast) => {
-                    return (
-                        <HornedBeast img={beast.image_url} description={beast.description} title={beast.title} />
-                    )
-                })
-            }
-        </>
-    )
+        <div>
+            {data.map((beast) => {
+                return (
+                    <HornedBeast 
+                        key={beast._id}
+                        title={beast.title}
+                        imgUrl={beast.imageUrl} 
+                        description={beast.description} 
+                    />
+                );
+            })}
+         </div>
+    );
 }

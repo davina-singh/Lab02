@@ -1,13 +1,19 @@
-import Gallery from './Gallery';
+import { useState } from "react";
 
-export default function HornedBeast({title, img, description}) {
+export default function HornedBeast({ title, imageUrl, description }) {
+
+    const [likes, setLikes] = useState(0);
+
+    function handleLikes() {
+        setLikes(likes + 1);
+    }
     
     return (
-        <>
+        <div>
             <h2>{title}</h2>
-            <img src={img} alt={title} onClick={handleLikes} />
+            <img src={imageUrl}  />
             <p>{description}</p>
-            <span>❤️{likes}</span>
-        </>
-    )
+            <p onClick={handleLikes}>❤️ {likes}</p>
+        </div>
+    );
 }

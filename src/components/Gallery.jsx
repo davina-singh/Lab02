@@ -1,9 +1,7 @@
 import HornedBeast from "./HornedBeast";
-import data from "../assets/data.json";
 
-export default function Gallery() {
-    console.log('Hello')
-    console.log(data)
+export default function Gallery({data, handleShowModal}) {
+   
     return (
         <div>
             {data.map((beast) => {
@@ -13,6 +11,7 @@ export default function Gallery() {
                         title={beast.title}
                         image_url={beast.image_url} 
                         description={beast.description} 
+                        handleShowModal={handleShowModal}
                     />
                 );
             })}
